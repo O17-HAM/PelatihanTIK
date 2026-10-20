@@ -2,17 +2,39 @@
 <html>
 <head>
     <title>Profil Saya</title>
+    <!-- Menghubungkan HTML dengan file CSS agar desainnya terpasang -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- 
+      SOLUSI: Iframe dipindah ke bagian paling atas.
+      Sekarang saat kamu scroll teks ke bawah, video akan menempel di atas berkat CSS 'sticky'.
+      URL juga sudah diperbaiki (?loop=1 diubah menjadi &loop=1).
+    -->
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/k3Fue8fekqc?si=kSogMGSURZ9Fbczc&loop=1&autoplay=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
     <div class="kartu-profil">
         <h1>Profil Saya</h1>
         <img src="https://i.pinimg.com/736x/d1/ec/fa/d1ecfae837107adc11ca692e66ba122d.jpg" height="250px">
+        
+        <!-- Paragraf panjang ini yang akan membuat halaman bisa di-scroll -->
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor debitis unde voluptatibus voluptates obcaecati, nam ea qui recusandae optio dolorem architecto, odit autem aut maxime, nobis consectetur esse vero sapiente sed. Harum, ut voluptatem mollitia natus ex veritatis aperiam ea laborum laudantium doloribus iusto ipsa saepe voluptatibus obcaecati eos! Animi veniam deleniti asperiores quo officiis. Optio sunt ut eveniet minima ducimus aut ullam nesciunt, quam odio tenetur eaque amet officia expedita culpa neque maxime deserunt illo sed et recusandae libero possimus laborum! Accusamus doloremque laboriosam corrupti, rerum facilis commodi ab repudiandae accusantium eius perspiciatis, enim necessitatibus non eaque ad?</p>
+        
         <a href="https://gchq.github.io/CyberChef/">CyberChef</a>
+        <br><br> <!-- Menambahkan jarak sedikit (opsional) -->
+        
+        <!-- Tombol ini akan dipanggil oleh JavaScript -->
         <button id="sapaButton">Sapa saya!</button>
     </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/k3Fue8fekqc?si=kSogMGSURZ9Fbczc?loop=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <!-- Menghubungkan file JavaScript, letaknya di bawah agar HTML dimuat duluan -->
   <script src="script.js"></script>
 </body>
 </html>
