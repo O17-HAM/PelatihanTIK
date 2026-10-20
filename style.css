@@ -1,25 +1,34 @@
-body{
+/* Mengatur tampilan seluruh latar belakang halaman */
+body {
   background-color: #FFFFE0;
   font-family: Arial, sans-serif;
   color: #191970;
+  /* Tambahan agar iframe berada di tengah layaknya profil */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
-.kartu-profil{
+/* Mengatur kotak kartu profil */
+.kartu-profil {
   width: 300px;
   margin: 50px auto;
   padding: 20px;
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align:center;
+  border-radius: 15px; /* Membuat sudut kotak menjadi membulat */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Memberikan efek bayangan */
+  text-align: center; /* Membuat semua teks di dalam kartu berada di tengah */
 }
 
-.kartu-profil img{
+/* Mengatur gambar di dalam kartu profil */
+.kartu-profil img {
   width: 150px;
-  border-radius: 50%;
+  border-radius: 50%; /* Membuat gambar menjadi lingkaran sempurna */
 }
 
-iframe{
-  position:sticky;
-  top:10px;
+/* Mengatur iframe agar menempel/melayang saat di-scroll */
+iframe {
+  position: sticky; /* Memberitahu browser agar elemen ini menempel */
+  top: 10px; /* Menempel dengan jarak 10 pixel dari ujung atas layar */
+  margin-top: 20px; /* Jarak agar video tidak terlalu mepet ke atas saat pertama kali dimuat */
 }
