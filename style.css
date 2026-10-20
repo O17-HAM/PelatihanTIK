@@ -3,32 +3,35 @@ body {
   background-color: #FFFFE0;
   font-family: Arial, sans-serif;
   color: #191970;
-  /* Tambahan agar iframe berada di tengah layaknya profil */
+  
+  /* PERUBAHAN: Membuat elemen berjejer ke samping (kiri-kanan) */
   display: flex;
-  flex-direction: column;
-  align-items: center; 
+  flex-direction: row; 
+  align-items: flex-start; /* Memastikan semua elemen menempel ke tepi atas */
+  gap: 40px; /* Memberikan jarak yang pas antara video di kiri dan profil di sebelahnya */
+  padding: 20px; /* Memberikan jarak agar tidak terlalu mepet dengan pinggir layar browser */
 }
 
 /* Mengatur kotak kartu profil */
 .kartu-profil {
   width: 300px;
-  margin: 50px auto;
+  /* PERUBAHAN: Menghapus 'margin: auto' karena kita tidak lagi memaksanya ke tengah layar */
   padding: 20px;
   background-color: white;
-  border-radius: 15px; /* Membuat sudut kotak menjadi membulat */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Memberikan efek bayangan */
-  text-align: center; /* Membuat semua teks di dalam kartu berada di tengah */
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  text-align: center; 
 }
 
 /* Mengatur gambar di dalam kartu profil */
 .kartu-profil img {
   width: 150px;
-  border-radius: 50%; /* Membuat gambar menjadi lingkaran sempurna */
+  border-radius: 50%; 
 }
 
-/* Mengatur iframe agar menempel/melayang saat di-scroll */
+/* Mengatur iframe agar menempel/melayang di sebelah KIRI saat di-scroll */
 iframe {
-  position: sticky; /* Memberitahu browser agar elemen ini menempel */
-  top: 10px; /* Menempel dengan jarak 10 pixel dari ujung atas layar */
-  margin-top: 20px; /* Jarak agar video tidak terlalu mepet ke atas saat pertama kali dimuat */
+  position: sticky; 
+  top: 20px; /* Jarak menempel dari ujung atas layar */
+  /* Karena kita memakai 'flex-direction: row' di body, posisinya otomatis terkunci di kiri! */
 }
