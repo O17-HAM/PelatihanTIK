@@ -20,5 +20,6 @@ body{
 }
 
 iframe{
-  position:fixed;
+  position:sticky;
+  top:10px;
 }
